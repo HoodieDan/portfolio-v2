@@ -4,9 +4,9 @@
 		<div class="welcome">
 			<h1 class="heading">Daniel Obode</h1>
 			<h3 class="sub-heading">Frontend Developer</h3>
-			<div class="loader-wrapper">
+			<!-- <div class="loader-wrapper">
 				<div class="loader"></div>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="content">
@@ -82,7 +82,8 @@ body::-webkit-scrollbar-thumb {
 	height: 100vh;
 	width: 100vw;
 	position: absolute;
-	background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff);
+	/* background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff); */
+  background: #323232;
 	display: flex;
 	align-items: center;
 	justify-content: center;
