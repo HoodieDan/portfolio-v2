@@ -45,6 +45,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    'hover-effect',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

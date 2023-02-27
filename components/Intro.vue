@@ -1,5 +1,9 @@
 <template>
     <div class="intro">
+        <div class="triangle">
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
         <h1 class="header">
             <span>i create <span class="text-gradient">magic</span></span> <br>
             <span>that lives on </span> <br>
@@ -25,7 +29,7 @@
 
 <style scoped>
 .intro {
-    padding: 5rem 3.5rem;
+    padding: 3.5rem;
     position: relative;
 }
 .header {
@@ -45,6 +49,7 @@
 
 .project-link-div {
     position: relative;
+    display: inline-block;
 }
 
 .projects {
@@ -58,7 +63,7 @@
     content: "";
     background: #fff;
     height: 1px;
-    width: 5%;
+    width: 50%;
     position: absolute;
     top: 108%;
     transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);    
@@ -68,7 +73,7 @@
 }
 
 .projects:hover:before {
-    width: 11%;
+    width: 100%;
 }
 
 .socials {
@@ -134,6 +139,29 @@
 
 .brand:hover:before {
     width: 4.5%;
+}
+
+.top {
+    position : absolute;
+    top      : 6px;
+    left     : 10px;
+    width    : 0;
+    height   : 0;
+    z-index  : 100;
+    
+    border-left   : 50px solid transparent;
+    border-right  : 50px solid transparent;
+    border-bottom : 50px solid #101010;
+}
+.bottom {
+    position : absolute;
+    width    : 0;
+    height   : 0;
+    z-index  : 99;
+    
+    border-left   : 60px solid transparent;
+    border-right  : 60px solid transparent;
+    border-bottom : 60px solid #fff;
 }
 
 @keyframes bg {
