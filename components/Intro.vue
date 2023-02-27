@@ -60,7 +60,7 @@
     height: 1px;
     width: 5%;
     position: absolute;
-    top: 105%;
+    top: 108%;
     transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);    
     -moz-transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -125,7 +125,7 @@
     height: 1px;
     width: 2%;
     position: absolute;
-    top: 105%;
+    top: 108%;
     transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);    
     -moz-transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);

@@ -82,13 +82,14 @@ body::-webkit-scrollbar-thumb {
 	height: 100vh;
 	width: 100vw;
 	position: absolute;
-	background: #fff;
+	background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	letter-spacing: 2px;
-	color: #323232;
+	color: #fff;
+  animation: nebulahero 20s infinite linear;
 }
 
 .heading {
@@ -124,5 +125,10 @@ body::-webkit-scrollbar-thumb {
 .content {
 	opacity: 0;
   width: 100%;
+}
+
+@keyframes nebulahero {
+	0% {-webkit-filter: hue-rotate(0deg);}
+	100% {-webkit-filter: hue-rotate(-360deg);}
 }
 </style>
