@@ -1,5 +1,5 @@
 <template>
-	<div class="body px-5">
+	<div class="body">
 
     <nav>
       <div class="logo-container">
@@ -83,8 +83,9 @@ onMounted(() => {
 	timeline.fromTo('.loader', { width: '0%' }, { width: '100%', duration: 2.3 })
 	timeline.fromTo('.welcome',{x:0, display:'flex'}, { x: '100vw', display: 'none' })
 	timeline.fromTo('.content', { y: '-30px' }, { y: 0, opacity: 1, stagger: 0.35 })
-  timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%' }, { width: '55vw', borderRadius: '32px' })
+  timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%',opacity: 0 }, { width: '55vw', borderRadius: '32px',opacity: 1 })
   timeline.fromTo('.nuxt-link', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.35 })
+  timeline.fromTo('.logo-container', { opacity: 0 }, { opacity: 1 })
 })
 
 const replay = () => timeline.seek(0)
