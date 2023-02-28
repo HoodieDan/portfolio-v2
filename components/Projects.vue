@@ -116,7 +116,7 @@
                 </div>
             </div>
 
-            <p>Check out the rest of them on my <span class="link-div"><a href="https://www.github.com/hoodiedan" target="__blank" class="project-link">Github</a></span> <i class="fa-regular fa-heart"></i></p>
+            <p class="text-center">Check out the rest of them on my <span class="link-div"><a href="https://www.github.com/hoodiedan" target="__blank" class="project-link">Github</a></span> <i class="fa-regular fa-heart"></i></p>
 
         </div>
 
@@ -340,6 +340,7 @@ canvas {
     div.project {
         width: 90%;
         display: block;
+        padding: 2rem;
         /* backdrop-filter: blur(0px); */
     }
 

@@ -163,10 +163,13 @@
 
 @media (max-width: 768px) {
     .intro {
-        padding: 6rem 1.5rem;
+        padding: 4.5rem 1.5rem 6rem;
     }
     .header {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
+    }
+    .triangle {
+        bottom: 2rem;
     }
     .brand {
         padding-right: 1rem;
