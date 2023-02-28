@@ -1,5 +1,5 @@
 <template>
-    <div class="container" id="projects">
+    <div class="" id="projects">
         <h1 class="header">Some <span class="text-gradient">Cool Stuff</span> I've Built.</h1>
 
         <div class="projects">
@@ -152,6 +152,7 @@ onMounted(()=>{
 
 <style scoped>
 .container {
+    max-width: 100vw;
 }
 
 h1.header {
@@ -323,7 +324,7 @@ canvas {
     }
 
     div.projects {
-        width: 100vw;
+        width: 95vw;
         /* display: block; */
     }
 
