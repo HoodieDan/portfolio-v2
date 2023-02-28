@@ -77,7 +77,7 @@ onMounted(()=>{
 	box-sizing: border-box;
 	font-family: 'poppins', sans-serif;
 	line-height: 1.7;
-    padding: 1rem;
+    padding: 1rem !important;
 	position: relative;
 	background: transparent;
 	height: 40rem;

@@ -218,7 +218,7 @@ nav {
 
 .content {
 	opacity: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 div.circle {
