@@ -106,8 +106,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .body {
-	height: 100vh;
-	width: 100vw;
 	margin: 0;
 	display: flex;
 	align-items: center;
