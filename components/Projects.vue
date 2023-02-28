@@ -342,7 +342,7 @@ canvas {
 
     div.project-left {
         width: 100%;
-        padding-right: 0;
+        margin-right: 0;
     }
 
     div.links {
