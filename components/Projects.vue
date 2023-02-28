@@ -324,7 +324,7 @@ canvas {
     }
 
     div.projects {
-        width: 100vw;
+        max-width: 95vw !important;
         padding-left: 1rem;
         padding-right: 1rem;
         /* display: block; */
