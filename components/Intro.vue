@@ -29,24 +29,14 @@
 
 <style scoped>
 .intro {
-    padding: 3.5rem;
+    padding: 2.5rem 3.5rem 3.5rem;
     position: relative;
 }
 .header {
-    font-size: 6rem;
+    font-size: 4.5rem;
     line-height: 100%;
     letter-spacing: -.03em;
 }
-
-.text-gradient {
-    color: transparent;
-    background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff);
-    background-size: 10000px 100%;
-    animation: bg 15s linear infinite;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
 .project-link-div {
     position: relative;
     display: inline-block;
@@ -139,6 +129,12 @@
 
 .brand:hover:before {
     width: 4.5%;
+}
+
+.triangle {
+    position: relative;
+    bottom: 1rem;
+    background-color: #fff;
 }
 
 .top {

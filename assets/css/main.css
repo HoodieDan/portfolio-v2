@@ -2,7 +2,31 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 a {
     text-decoration: none;
     color: #fff;
+}
+
+.text-gradient {
+    color: transparent;
+    background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff);
+    background-size: 10000px 100%;
+    animation: bg 15s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.tektalk-gradient {
+    background: linear-gradient(to right, #20BF55, #01BAEF);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.real-estate-color {
+    color: #D9D849;
+}
+
+.twitter-color {
+    color: #00acee ;
 }

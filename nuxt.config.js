@@ -11,11 +11,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'TekTalk is a social network aimed for tech driven individuals to be able to meet like minded individuals for whatever reason it may be. It is made for but not limited to techies. Tektalk also welcomes everyone, guests included.' },
+      { hid: 'description', name: 'description', content: 'Daniel Obode the Frontend Web Developer.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css' },
       { rel:"preconnect", href:"https://fonts.googleapis.com" },
       { rel:"preconnect", href:"https://fonts.gstatic.com", crossOriginIsolated: true },
       { href:"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap", rel:"stylesheet" }
@@ -35,6 +36,11 @@ export default {
     './assets/css/main.css',
   ],
 
+  js: [
+    'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js',
+    'https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js'
+  ],
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -45,7 +51,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    'hover-effect',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

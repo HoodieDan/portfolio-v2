@@ -1,48 +1,141 @@
 <template>
-    <div class="container">
-        <h1>Some Cool Stuff I've Built.</h1>
+    <div class="container" id="projects">
+        <h1 class="header">Some <span class="text-gradient">Cool Stuff</span> I've Built.</h1>
 
         <div class="projects">
-            <div class="project">
-                <div class="project-left">
-                    <div class="distortion"></div>
+            
+            <!-- Project one -->
+            <div class="project row">
+                <div class="project-left col-5">
+                    <!-- <div class="distortion"></div> -->
+                    <img class="img-fluid project-image" src="../assets/images/Tektalk-logo.jpeg" alt="Tektalk Logo">
                 </div>
-                <div class="project-right">
-                    <h2>Tektalk</h2>
+                <div class="project-right col-7">
+                    <div>
+                        <h1 class="tektalk-gradient">Tektalk</h1>
+                        <p>Meet people in the tech space just like you!</p>
+                    </div>
 
-                    <div class="link-div">
-                        <a class="project-link" href="https://tektalk.vercel.app" target="__blank">VISIT WEBSITE</a>
+                    <div>
+                        <div class="link-div">
+                            <a class="project-link" href="https://tektalk.vercel.app" target="__blank">VISIT WEBSITE</a>
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://github.com/HoodieDan/Tektalk" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
+
+                        <button class="info"><i class="fa-solid fa-info"></i></button>
                     </div>
                 </div>
             </div>
+
+            <!-- Project two -->
+            <div class="project row">
+                <div class="project-left col-5">
+                    <!-- <div class="distortion"></div> -->
+                    <img class="img-fluid project-image" src="../assets/images/real-estate-logo.png" alt="Real Estate Logo">
+                </div>
+                <div class="project-right col-7">
+                    <div>
+                        <h1 class="real-estate-color">Real Estate</h1>
+                        <p>Turn your dream house to your home!</p>
+                    </div>
+
+                    <div>
+                        <div class="link-div">
+                            <a class="project-link" href="https://realest-estate.netlify.app" target="__blank">VISIT WEBSITE</a>
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://github.com/HoodieDan/Real-Estate" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
+
+                        <button class="info"><i class="fa-solid fa-info"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project three -->
+            <div class="project row">
+                <div class="project-left col-5">
+                    <!-- <div class="distortion"></div> -->
+                    <img class="img-fluid project-image" src="../assets/images/drew-music-logo.png" alt="Drew Music Logo">
+                </div>
+                <div class="project-right col-7">
+                    <div>
+                        <h1>Drew Music</h1>
+                        <p>There is a sound for everyone, find yours!</p>
+                    </div>
+
+                    <div>
+                        <div class="link-div">
+                            <a class="project-link" href="https://drew-music.vercel.app" target="__blank">VISIT WEBSITE</a>
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://github.com/HoodieDan/Drew-Music" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
+
+                        <button class="info"><i class="fa-solid fa-info"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project four -->
+            <div class="project row">
+                <div class="project-left col-5">
+                    <!-- <div class="distortion"></div> -->
+                    <img class="img-fluid project-image" src="../assets/images/twitter-logo.jpg" alt="Twitter Logo">
+                </div>
+                <div class="project-right col-7">
+                    <div>
+                        <h1>Twitter Clone</h1>
+                        <p>No, it's not actually Twitter but don't worry, I had a hard time differentiating it too.</p>
+                    </div>
+
+                    <div>
+                        <div class="link-div">
+                            <a class="project-link" href="https://hoodietwitter.vercel.app" target="__blank">VISIT WEBSITE</a>
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <a href="https://github.com/HoodieDan/nuxtjs-twitter-clone" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
+
+                        <button class="info"><i class="fa-solid fa-info"></i></button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import hoverEffect from 'hover-effect'
-import { onMounted } from 'vue'
+import hoverEffect from 'hover-effect';
+import { onMounted } from 'vue';
 
 // const img_1 = new URL('../assets/images/Tektalk.png', import.meta.url) as any
 // const img_2 = new URL('../assets/images/Tektalk-logo.jpeg', import.meta.url) as any
 // const diss = new URL('../assets/images/diss.png', import.meta.url) as any
-onMounted(()=>{
-	new hoverEffect({
-		parent: document.querySelector('.distortion'),
-		intensity: .25,
-		image1: require('../assets/images/Tektalk.png'),
-		image2: require('../assets/images/Tektalk-logo.jpeg'),
-		displacementImage: require('../assets/images/diss.png'),
-		// imagesRatio: 380 / 300
-	})
-})
+// onMounted(()=>{
+// 	new hoverEffect({
+// 		parent: document.querySelector('.distortion'),
+// 		intensity: .25,
+// 		image1: img_1.href,
+// 		image2: img_2.href,
+// 		displacementImage: diss.href,
+// 		// imagesRatio: 380 / 300
+// 	})
+// })
 </script>
 
 <style scoped>
 .container {
 }
 
-h1 {
+h1.header {
     padding-left: 3.5rem;
     padding-bottom: 1rem;
     font-size: 2.5rem;
@@ -65,30 +158,57 @@ h1 {
     height: 8rem;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.project:nth-of-type(1)::before {  
     background-image: url('../assets/images/one.svg');
+}
+
+.project:nth-of-type(2)::before {  
+    background-image: url('../assets/images/two.svg');
+}
+
+.project:nth-of-type(3)::before {  
+    background-image: url('../assets/images/three.svg');
+}
+
+.project:nth-of-type(4)::before {  
+    background-image: url('../assets/images/four.svg');
 }
 
 .project {
     margin-top: 5rem;
+    margin-bottom: 5rem;
     padding: 3rem;
     border: 1px solid #252525;
     width: 60%;
     border-radius: 32px;
-    backdrop-filter: blur(45px);
-    background: linear-gradient(180deg, #101212 , #101010);
+    backdrop-filter: blur(54px);
+    background: linear-gradient(180deg, rgba(240, 224, 224, 0.1) , #101010);
     display: flex;
 }
 
 .project-left {
-    width: 40%;
-    height: 50vh;
+    width: 45%;
+    height: 25rem;
     padding-right: 2rem;
+    border-radius: 32px;
 }
 
-.project-left.distortion {
+.project-left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 32px;
+    border: 1px solid #252525;
+}
+
+.project-left.distortion {
+    max-width: 100%;
+    max-height: 100%;
+    width: 20rem;
+    height: 40rem;
+    /* object-fit: cover; */
 }
 
 .project-right {
@@ -99,6 +219,7 @@ h1 {
 
 .link-div {
     position: relative;
+    display: inline-block;
 }
 
 .project-link {
@@ -123,5 +244,83 @@ h1 {
 
 .project-link:hover:before {
     width: 100%;
+}
+
+.links {
+    display: flex;
+    position: relative;
+}
+
+.link {
+    font-size: 1.2rem;
+    color: #A9A9A9;
+    transition: all 0.8s ease-out;
+    margin-right: 1rem;
+}
+
+.fa-github::before {
+    position: relative;
+    top: 0.3rem;
+}
+
+.link:hover {
+    color: #fff;
+}
+
+button.info {
+    background: transparent;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 1px solid #A9A9A9;
+    color: #A9A9A9;
+    align-self: flex-end;
+    transition: all 0.8s ease-out;
+    cursor: pointer;
+}
+
+button.info:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+button.info i {
+    font-size: 0.8rem;
+}
+
+@media (max-width:575px) {
+    h1.header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+        font-size: 1.9rem;
+    }
+
+    div.projects {
+        width: 100vw;
+        /* display: block; */
+    }
+
+    div.project::before {
+        top: -3rem;
+        right: 0rem;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    div.project {
+        width: 95vw;
+        display: block;
+        /* backdrop-filter: blur(0px); */
+    }
+
+    div.project-left {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    div.links {
+        margin-top: 1rem;
+    }
 }
 </style>

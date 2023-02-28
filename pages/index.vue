@@ -1,25 +1,34 @@
 <template>
 	<div class="body px-5">
 
-    <div class="logo-container">
-      <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
-        <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
-        <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-        <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
-        <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
-        <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-        <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
-        <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
-      </svg>
+    <nav>
+      <div class="logo-container">
+        <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+          <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+          <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
+        </svg>
 
-      <div class="logo nav-logo">
-        <div class="d-container">
-          <div class="d"></div>
+        <div class="logo nav-logo">
+          <div class="d-container">
+            <div class="d"></div>
+          </div>
+          <div class="o"></div>
         </div>
-        <div class="o"></div>
       </div>
-    </div>
+
+      
+      <div class="nav-items">
+          <nuxt-link class="nuxt-link" to="#projects">PROJECTS</nuxt-link>
+          <nuxt-link class="nuxt-link" to="#about">ABOUT</nuxt-link>
+          <nuxt-link class="nuxt-link" to="#contact">CONTACT</nuxt-link>
+      </div>
+    </nav>
 
 		<div class="welcome">
       <div class="logo">
@@ -106,6 +115,57 @@ body::-webkit-scrollbar-thumb {
 	color: #fff;
 }
 
+nav {
+  width: 100vw;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nav-items {
+    height: 4.4rem;
+    width: 55vw;
+    display: flex;
+    justify-content: space-around;
+    align-self: flex-start;
+    backdrop-filter: blur(10px);
+    background-color: #10101a; /* Fallback color */
+    background-color: rgba(240, 224, 224, 0.1); 
+    border: 1px solid #252525;
+    position: fixed;
+    right: 3.5rem;
+    border-radius: 32px;
+    z-index: 9;
+}
+
+.nuxt-link {
+  align-self: center;
+  display: inline-block;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.nuxt-link::before {
+    content: "";
+    background: #fff;
+    height: 1px;
+    width: 4%;
+    position: absolute;
+    top: 75%;
+    transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);    
+    -moz-transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nuxt-link:hover:before {
+    width: 11%;
+}
+
 .welcome {
 	height: 100vh;
 	width: 100vw;
@@ -118,6 +178,7 @@ body::-webkit-scrollbar-thumb {
 	flex-direction: column;
 	letter-spacing: 2px;
 	color: #fff;
+  z-index: 10;
   animation: nebulahero 20s infinite linear;
 }
 
@@ -164,8 +225,6 @@ div.circle {
 }
 
 .logo-container {
-  padding-left: 3.5rem;
-  margin-top: 2rem;
   cursor: pointer;
   position: relative;
 }
@@ -291,5 +350,16 @@ div.d-container {
 	0% {transform: rotate(45deg) scale(1);}
     50%{transform: rotate(135deg) scale(1.5);}
     100%{transform: rotate(225deg) scale(1); }
+}
+
+@media (max-width: 575px) {
+  nav {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .logo-container {
+    transform: scale(0.7);
+  }
 }
 </style>
