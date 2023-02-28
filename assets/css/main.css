@@ -8,6 +8,10 @@ a {
     color: #fff;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .text-gradient {
     color: transparent;
     background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff);
@@ -27,6 +31,26 @@ a {
     color: #D9D849;
 }
 
+.drew-music-color {
+    color: #0bce5a
+}
+
 .twitter-color {
     color: #00acee ;
 }
+
+canvas {
+    object-fit: cover !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@keyframes bg {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 10000px;
+    }
+  }

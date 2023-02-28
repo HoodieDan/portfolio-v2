@@ -24,9 +24,9 @@
 
       
       <div class="nav-items">
-          <nuxt-link class="nuxt-link" to="#projects">PROJECTS</nuxt-link>
-          <nuxt-link class="nuxt-link" to="#about">ABOUT</nuxt-link>
-          <nuxt-link class="nuxt-link" to="#contact">CONTACT</nuxt-link>
+          <nuxt-link class="nuxt-link projects-link" to="#projects">PROJECTS</nuxt-link>
+          <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link>
+          <nuxt-link class="nuxt-link contact-link" to="#contact">CONTACT</nuxt-link>
       </div>
     </nav>
 
@@ -47,6 +47,8 @@
 		<div class="content">
       <Intro />
       <Projects />
+      <Contact />
+      <Footer />
     </div>
 
 	</div>
@@ -81,6 +83,8 @@ onMounted(() => {
 	timeline.fromTo('.loader', { width: '0%' }, { width: '100%', duration: 2.3 })
 	timeline.fromTo('.welcome',{x:0, display:'flex'}, { x: '100vw', display: 'none' })
 	timeline.fromTo('.content', { y: '-30px' }, { y: 0, opacity: 1, stagger: 0.35 })
+  timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%' }, { width: '55vw', borderRadius: '32px' })
+  timeline.fromTo('.nuxt-link', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.35 })
 })
 
 const replay = () => timeline.seek(0)
@@ -124,6 +128,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
+  position: relative;
 }
 
 .nav-items {
@@ -146,16 +151,16 @@ nav {
   align-self: center;
   display: inline-block;
   letter-spacing: 0.1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .nuxt-link::before {
     content: "";
     background: #fff;
     height: 1px;
-    width: 4%;
+    width: 30%;
     position: absolute;
-    top: 75%;
+    top: 100%;
     transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);    
     -moz-transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -163,7 +168,7 @@ nav {
 }
 
 .nuxt-link:hover:before {
-    width: 11%;
+    width: 60%;
 }
 
 .welcome {
@@ -356,6 +361,11 @@ div.d-container {
   nav {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .nav-items {
+    width: 65vw;
+    right: 1rem;
   }
 
   .logo-container {

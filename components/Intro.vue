@@ -160,14 +160,6 @@
     border-bottom : 60px solid #fff;
 }
 
-@keyframes bg {
-  0% {
-    background-position: 0;
-  }
-  100% {
-    background-position: 10000px;
-  }
-}
 
 @media (max-width: 768px) {
     .intro {
@@ -178,6 +170,16 @@
     }
     .brand {
         padding-right: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .socials {
+        padding-top: 5rem;
+    }
+
+    .brand {
+        font-size: 0.9rem;
     }
 }
 </style>

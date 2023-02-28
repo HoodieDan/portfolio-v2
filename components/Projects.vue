@@ -6,9 +6,11 @@
             
             <!-- Project one -->
             <div class="project row">
-                <div class="project-left col-5">
+                <div class="project-left col-5" data-displacement="../assets/images/diss.png">
                     <!-- <div class="distortion"></div> -->
+                    <img src="https://images.pexels.com/photos/5081918/pexels-photo-5081918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tektalk">
                     <img class="img-fluid project-image" src="../assets/images/Tektalk-logo.jpeg" alt="Tektalk Logo">
+                    <img src="../assets/images/diss.png" alt="displacement image">
                 </div>
                 <div class="project-right col-7">
                     <div>
@@ -32,9 +34,11 @@
 
             <!-- Project two -->
             <div class="project row">
-                <div class="project-left col-5">
+                <div class="project-left col-5" data-displacement="../assets/images/diss.png">
                     <!-- <div class="distortion"></div> -->
+                    <img src="https://images.pexels.com/photos/1838640/pexels-photo-1838640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Real Estate">
                     <img class="img-fluid project-image" src="../assets/images/real-estate-logo.png" alt="Real Estate Logo">
+                    <img src="../assets/images/diss.png" alt="displacement image">
                 </div>
                 <div class="project-right col-7">
                     <div>
@@ -58,13 +62,15 @@
 
             <!-- Project three -->
             <div class="project row">
-                <div class="project-left col-5">
+                <div class="project-left col-5" data-displacement="../assets/images/diss.png">
                     <!-- <div class="distortion"></div> -->
+                    <img src="https://images.pexels.com/photos/4709825/pexels-photo-4709825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Drew Music">
                     <img class="img-fluid project-image" src="../assets/images/drew-music-logo.png" alt="Drew Music Logo">
+                    <img src="../assets/images/diss.png" alt="displacement image">
                 </div>
                 <div class="project-right col-7">
                     <div>
-                        <h1>Drew Music</h1>
+                        <h1 class="drew-music-color">Drew Music</h1>
                         <p>There is a sound for everyone, find yours!</p>
                     </div>
 
@@ -84,13 +90,15 @@
 
             <!-- Project four -->
             <div class="project row">
-                <div class="project-left col-5">
+                <div class="project-left col-5"  data-displacement="../assets/images/diss.png">
                     <!-- <div class="distortion"></div> -->
+                    <img src="https://images.pexels.com/photos/9129527/pexels-photo-9129527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Twitter">
                     <img class="img-fluid project-image" src="../assets/images/twitter-logo.jpg" alt="Twitter Logo">
+                    <img src="../assets/images/diss.png" alt="displacement image">
                 </div>
                 <div class="project-right col-7">
                     <div>
-                        <h1>Twitter Clone</h1>
+                        <h1 class="twitter-color">Twitter Clone</h1>
                         <p>No, it's not actually Twitter but don't worry, I had a hard time differentiating it too.</p>
                     </div>
 
@@ -108,7 +116,10 @@
                 </div>
             </div>
 
+            <p>Check out the rest of them on my <span class="link-div"><a href="https://www.github.com/hoodiedan" target="__blank" class="project-link">Github</a></span> <i class="fa-regular fa-heart"></i></p>
+
         </div>
+
     </div>
 </template>
 
@@ -116,19 +127,27 @@
 import hoverEffect from 'hover-effect';
 import { onMounted } from 'vue';
 
-// const img_1 = new URL('../assets/images/Tektalk.png', import.meta.url) as any
-// const img_2 = new URL('../assets/images/Tektalk-logo.jpeg', import.meta.url) as any
-// const diss = new URL('../assets/images/diss.png', import.meta.url) as any
-// onMounted(()=>{
-// 	new hoverEffect({
-// 		parent: document.querySelector('.distortion'),
-// 		intensity: .25,
-// 		image1: img_1.href,
-// 		image2: img_2.href,
-// 		displacementImage: diss.href,
-// 		// imagesRatio: 380 / 300
-// 	})
-// })
+onMounted(()=>{
+    // image hover effect
+    Array.from(document.querySelectorAll(".project-left")).forEach(
+      (el: any) => {
+        const imgs: any = Array.from(el.querySelectorAll("img"));
+        console.log(imgs);
+        
+        new hoverEffect({
+          parent: el,
+          intensity: 0.2,
+          speedIn: el.dataset.speedin || undefined,
+          speedOut: el.dataset.speedout || undefined,
+          easing: el.dataset.easing || undefined,
+          hover: el.dataset.hover || undefined,
+          image1: imgs[0].attributes.src.nodeValue,
+          image2: imgs[1].attributes.src.nodeValue,
+          displacementImage: imgs[2].attributes.src.nodeValue,
+        });
+      }
+    );
+})
 </script>
 
 <style scoped>
@@ -189,10 +208,11 @@ h1.header {
 }
 
 .project-left {
-    width: 45%;
+    width: 40%;
     height: 25rem;
-    padding-right: 2rem;
-    border-radius: 32px;
+    margin-right: 2rem;
+    border-radius: 16px;
+    position: relative;
 }
 
 .project-left img {
@@ -201,6 +221,8 @@ h1.header {
     object-fit: cover;
     border-radius: 32px;
     border: 1px solid #252525;
+    position: absolute;
+    display: none;
 }
 
 .project-left.distortion {
@@ -288,6 +310,10 @@ button.info i {
     font-size: 0.8rem;
 }
 
+canvas {
+    position: absolute;
+}
+
 @media (max-width:575px) {
     h1.header {
         padding-left: 1rem;
@@ -309,7 +335,7 @@ button.info i {
     }
 
     div.project {
-        width: 95vw;
+        width: 85vw;
         display: block;
         /* backdrop-filter: blur(0px); */
     }
