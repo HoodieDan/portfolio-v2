@@ -20,6 +20,8 @@
             <a class="brand" href="https://twitter.com/osemuu" target="__blank"><span class="twitter"><i class="link fa-brands fa-twitter"></i></span>TW</a>
             <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><span class="linkedin"><i class="link fa-brands fa-linkedin"></i></span>IN</a>
         </div>
+
+        <p class="me">I’m a Frontend Web Developer specializing in building (and occassionally designing) exceptional digital experiences. I am an Engineer valued for driving high-performance accessible web experiences. I develop quality, user-friendly and scalable products.</p>
     </div>
 </template>
 
@@ -112,6 +114,7 @@
 .brand {
     padding-right: 2rem;
     color: #fff;
+    font-size: 0.8rem;
 }
 
 .brand::before {
@@ -160,6 +163,11 @@
     border-bottom : 60px solid #fff;
 }
 
+p.me {
+    margin-top: 4rem;
+    width: 70%;
+}
+
 
 @media (max-width: 768px) {
     .intro {
@@ -181,8 +189,25 @@
         padding-top: 5rem;
     }
 
+    .brand::before {
+        width: 7%;
+    }
+
+    .brand:hover:before {
+        width: 15%;
+    }
+
     .brand {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    p.me {
+        width: 100%;
+        text-align: center;
     }
 }
 </style>

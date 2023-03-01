@@ -5,11 +5,17 @@ body {
 	background: #101010;
 	font-family: 'Poppins';
 	color: #fff;
+    scroll-behavior: smooth;
 }
 
 * {
     -webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+p {
+    font-weight: 300;
+    font-size: 0.9rem;
 }
 
 a {

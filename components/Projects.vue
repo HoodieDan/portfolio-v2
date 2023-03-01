@@ -345,12 +345,26 @@ canvas {
     }
 
     div.project-left {
+        height: 17rem;
         width: 100%;
         margin-right: 0;
     }
 
     div.links {
         margin-top: 1rem;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 0.77rem;
+        margin-top: 0;
+    }
+
+    a.project-link {
+        font-size: 0.85rem;
     }
 }
 </style>

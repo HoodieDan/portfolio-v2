@@ -2,7 +2,7 @@
 	<div class="body">
 
     <nav>
-      <div class="logo-container">
+      <div class="logo-container nav-logo-container">
         <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
           <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
@@ -31,11 +31,24 @@
     </nav>
 
 		<div class="welcome">
-      <div class="logo">
-        <div class="d-container">
-          <div class="d"></div>
+      <div class="loader-container">
+        <svg class="logo-border bord" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+          <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+          <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
+        </svg>
+
+        <div class="logo nav-logo">
+          <div class="d-container">
+            <div class="d"></div>
+          </div>
+          <div class="o"></div>
         </div>
-        <div class="o"></div>
       </div>
 			<h1 class="heading">Daniel Obode</h1>
 			<h3 class="sub-heading">Frontend Developer</h3>
@@ -79,13 +92,14 @@ onMounted(() => {
 	timeline.fromTo('.logo', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
 	timeline.fromTo('.heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
 	timeline.fromTo('.sub-heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
+  timeline.fromTo('.bord', { animation: 'none' }, { animationName: 'spin', animationDuration: '1.5s', animationDirection: 'forwards' })
 	timeline.fromTo('.loader-wrapper',{y: '-30px', opacity: 0}, {y:0, opacity: 1 })
 	timeline.fromTo('.loader', { width: '0%' }, { width: '100%', duration: 2.3 })
 	timeline.fromTo('.welcome',{x:0, display:'flex'}, { x: '100vw', display: 'none' })
 	timeline.fromTo('.content', { y: '-30px' }, { y: 0, opacity: 1, stagger: 0.35 })
   timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%',opacity: 0 }, { width: '55vw', borderRadius: '32px',opacity: 1 })
   timeline.fromTo('.nuxt-link', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.35 })
-  timeline.fromTo('.logo-container', { opacity: 0 }, { opacity: 1 })
+  timeline.fromTo('.nav-logo-container', { opacity: 0 }, { opacity: 1 })
 })
 
 const replay = () => timeline.seek(0)
@@ -146,6 +160,10 @@ nav {
     z-index: 9;
 }
 
+.nav-logo-container {
+  transform: scale(0.8);
+}
+
 .nuxt-link {
   align-self: center;
   display: inline-block;
@@ -174,8 +192,8 @@ nav {
 	height: 100vh;
 	width: 100vw;
 	position: absolute;
-	/* background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff); */
-  background: #10101a;
+	background: linear-gradient(to left, #cf59e6, #8000ff);
+  /* background: #10101a; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -183,17 +201,18 @@ nav {
 	letter-spacing: 2px;
 	color: #fff;
   z-index: 10;
-  animation: nebulahero 20s infinite linear;
+  background-size: 10000px 100%;
+  animation: bg 15s linear infinite;
 }
 
 .heading {
-	font-size: 3rem;
+	font-size: 2rem;
 	margin-bottom: 0px;
 	opacity: 0;
 }
 
 .sub-heading {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-weight: 100;
 	letter-spacing: 2px;
 	margin-bottom: 1.2rem;
@@ -363,12 +382,24 @@ div.d-container {
   }
 
   .nav-items {
-    width: 65vw;
+    width: 70vw;
     right: 1rem;
   }
 
   .logo-container {
     transform: scale(0.7);
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .sub-heading {
+    font-size: 0.6rem;
+  }
+
+  .loader-logo {
+    transform: scale(0.9);
   }
 }
 </style>

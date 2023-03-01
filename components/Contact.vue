@@ -1,41 +1,54 @@
 <template>
-	<div class="bod center" id="contact">
+	<div>
+        <div class="bod center" id="contact">
         
-        <h1 class="header">Get in <span class="text-gradient">touch</span>!</h1>
-        <p class="text-center">I am currently looking for new opportunities. If you think we can make magic together, contact me and let's talk!</p>
+            <h1 class="header">Get in <span class="text-gradient">touch</span>!</h1>
+            <p class="text-center header-baby">I am currently looking for new opportunities. If you think we can make magic together, contact me and let's talk!</p>
 
-		<div class="contain" @click="onClick">
-			<p class="card-name">Frontend Developer</p>
-			<h1 class="card-balance">Daniel O. Obode</h1>
-			<div class="logo-contain card-logo">
-                <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
-                <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
-                <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-                <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
-                <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
-                <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-                <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
-                <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
-                </svg>
+            <div class="contain" @click="onClick">
+                <p class="card-name">Frontend Developer</p>
+                <h1 class="card-balance">Daniel O. Obode</h1>
+                <div class="logo-contain card-logo">
+                    <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
+                    <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
+                    <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+                    <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
+                    <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
+                    <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+                    <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
+                    <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
+                    </svg>
 
-                <div class="logo">
-                    <div class="d-container">
-                        <div class="d"></div>
+                    <div class="logo">
+                        <div class="d-container">
+                            <div class="d"></div>
+                        </div>
+                        <div class="o"></div>
                     </div>
-                    <div class="o"></div>
                 </div>
+
+                <a class="sim" href="mailto:obodedaniel3@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+
+                <a href="tel:+2349039335002" class="card-number">+234 903 933 5002</a>
+                <p class="due-date">04/05</p>
+
+                <img src="../assets/images/pattern.png" class="card-logo" alt="" />
             </div>
 
-			<a class="sim" href="mailto:obodedaniel3@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <div class="connect">
+            <h2 class="text-gradient">Don't be shy!</h2>
+            <p>Connect with me on my socials!</p>
 
-			<a href="tel:+2349039335002" class="card-number">+234 903 933 5002</a>
-			<p class="due-date">04/05</p>
-
-			<img src="../assets/images/pattern.png" class="card-logo" alt="" />
-		</div>
-	</div>
-
+            <div class="socials">
+                <a class="brand" href="https://github.com/HoodieDan" target="__blank"><span class="github"><i class="link fa-brands fa-github"></i></span>GITHUB</a>
+                <a class="brand" href="https://instagram.com/the.7th.kind" target="__blank"><span class="instagram"><i class="link fa-brands fa-instagram"></i></span>INSTAGRAM</a>
+                <a class="brand" href="https://twitter.com/osemuu" target="__blank"><span class="twitter"><i class="link fa-brands fa-twitter"></i></span>TWITTER</a>
+                <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><span class="linkedin"><i class="link fa-brands fa-linkedin"></i></span>LINKEDIN</a>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -191,12 +204,114 @@ div.logo-contain.card-logo {
 	bottom: 30px;
 }
 
+.connect {
+    padding: 3.5rem;
+    position: relative;
+    bottom: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.socials {
+    width: 100%;
+    padding-top: 1rem;
+    /* padding-left: 3rem; */
+    position: relative;
+}
+
+.link {
+    /* font-size: 1.5rem; */
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
+    /* color: #fff; */
+}
+
+.github {
+    background: #323232 ;
+    margin-right: 0.3rem;
+    border-radius: 5px;
+}
+
+.instagram {
+    position: relative;
+    border-radius: 5px;
+    margin-right: 0.3rem;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.twitter {
+    background: #00acee ;
+    margin-right: 0.3rem;
+    border-radius: 5px;
+}
+
+.linkedin {
+    margin-right: 0.3rem;
+    border-radius: 5px;
+    background-color: #0072b1 ;
+}
+
+.brand {
+    padding-right: 2rem;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.brand::before {
+    content: "";
+    background: #fff;
+    height: 1px;
+    width: 2%;
+    position: absolute;
+    top: 108%;
+    transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);    
+    -moz-transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: width 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.brand:hover:before {
+    width: 6%;
+}
+
 @media (max-width: 575px) {
     .bod {
-        height: 45rem;
+        height: 40rem;
     }
     .logo {
         right: 5.6rem;
+    }
+
+    .header-baby {
+        font-size: 0.8rem;
+    }
+
+    .connect {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .brand::before {
+        width: 7%;
+    }
+
+    .brand:hover:before {
+        width: 15%;
+    }
+
+    .brand {
+        font-size: 0.7rem;
+    }
+
+    .brand:nth-of-type(1) {
+        display: none;
+    }
+
+    p {
+        font-size: 0.8rem;
     }
 }
 

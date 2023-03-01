@@ -1,6 +1,6 @@
 <template>
     <div class="foot">
-        <div>
+        <div class="cont">
             <div class="logo-container">
                 <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
@@ -20,7 +20,7 @@
                 <div class="o"></div>
                 </div>
             </div>
-            <h2 class="text-gradient">Daniel Obode</h2>
+            <!-- <h2 class="text-gradient">Daniel Obode</h2> -->
             <p>Top 10% VueJS Developer.</p>
         </div>
 
@@ -35,6 +35,17 @@
 </script>
 
 <style scoped>
+.cont {
+    display: flex;
+}
+
+.cont p {
+    font-size: 0.7rem;
+    align-self: center;
+}
+.logo-container {
+    height: 3.5rem;
+}
 .foot {
     border-top: 1px solid #fff;
     padding: 0.75rem 1.5rem;
@@ -45,10 +56,6 @@
 
 .logo-container {
     transform: scale(0.6);
-}
-
-.nav-logo {
-    right: 2rem;
 }
 
 h2 {
