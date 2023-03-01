@@ -329,10 +329,10 @@ canvas {
     }
 
     div.project::before {
-        top: -3rem;
+        top: -2rem;
         right: 0rem;
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     div.project {
