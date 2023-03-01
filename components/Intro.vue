@@ -185,6 +185,10 @@ p.me {
 }
 
 @media (max-width: 575px) {
+    /* .header {
+        font-size: 3.2rem;
+    } */
+    
     .socials {
         padding-top: 5rem;
     }

@@ -4,11 +4,12 @@
         
             <h1 class="header">Get in <span class="text-gradient">touch</span>!</h1>
             <p class="text-center header-baby">I am currently looking for new opportunities. If you think we can make magic together, contact me and let's talk!</p>
+            <p class="text-center">Click on <strong class="text-gradient">the card!</strong></p>
 
-            <div class="contain" @click="onClick">
-                <p class="card-name">Frontend Developer</p>
-                <h1 class="card-balance">Daniel O. Obode</h1>
-                <div class="logo-contain card-logo">
+            <div class="contain" @click.self="onClick">
+                <p class="card-name" @click="onClick">Frontend Developer</p>
+                <h1 class="card-balance" @click="onClick">Daniel O. Obode</h1>
+                <div class="logo-contain card-logo" @click="onClick">
                     <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
                     <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
@@ -33,7 +34,7 @@
                 <a href="tel:+2349039335002" class="card-number">+234 903 933 5002</a>
                 <p class="due-date">04/05</p>
 
-                <img src="../assets/images/pattern.png" class="card-logo" alt="" />
+                <img src="../assets/images/pattern.png" class="card-logo" alt="" @click="onClick" />
             </div>
 
         </div>
@@ -71,7 +72,7 @@ const onClick = () => {
 onMounted(()=>{
 	t1.to('.contain', {ease: 'power1.inOut',height: 280,},0)
 	t1.to('.sim', {	ease: 'power1.inOut', bottom: 40, opacity: 0.5,}, 0.5)
-	t1.to('.card-logo',	{ease: 'power1.inOut',right: -150,},0.6)
+	t1.to('.card-logo',	{ease: 'power1.inOut',right: -170,},0.6)
 	t1.to('.logo-contain', { ease: 'power1.inOut',left: 30,	top: 45,},0.5)
 	t1.to('.card-balance',{ease: 'power1.inOut',y: 80,x: 20,scale: 1.1,},0.5)
 	t1.to('.card-name', { ease: 'power1.inOut',	y: 80,},0.5)
@@ -94,7 +95,7 @@ onMounted(()=>{
 	position: relative;
 	background: transparent;
 	height: 40rem;
-    max-width: 95vw !important;
+    max-width: 96vw !important;
 }
 
 .header {
@@ -145,6 +146,7 @@ onMounted(()=>{
 	opacity: 0;
     color: #FFFFFF79;
     transition: all 0.8s ease-out;
+    font-size: 1.5rem;
 }
 
 .sim:hover {
@@ -282,7 +284,7 @@ div.logo-contain.card-logo {
         height: 40rem;
     }
     .logo {
-        right: 5.6rem;
+        right: 6.1rem;
     }
 
     .header-baby {
@@ -317,7 +319,27 @@ div.logo-contain.card-logo {
 
 @media (max-width: 420px) {
     .logo {
-        right: 4.7rem;
+        right: 4.9rem;
+    }
+
+    .contain {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        right: 4.3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .contain.card-logo {
+        right: -250px;
+    }
+
+    .logo {
+        right: 4.2rem;
     }
 }
 </style>
