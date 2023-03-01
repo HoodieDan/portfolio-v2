@@ -132,8 +132,6 @@ onMounted(()=>{
     Array.from(document.querySelectorAll(".project-left")).forEach(
       (el: any) => {
         const imgs: any = Array.from(el.querySelectorAll("img"));
-        console.log(imgs);
-        
         new hoverEffect({
           parent: el,
           intensity: 0.2,
@@ -333,8 +331,8 @@ canvas {
     div.project::before {
         top: -3rem;
         right: 0rem;
-        width: 7rem;
-        height: 7rem;
+        width: 6rem;
+        height: 6rem;
     }
 
     div.project {

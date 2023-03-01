@@ -1,6 +1,5 @@
 <template>
 	<div class="body">
-
     <nav>
       <div class="logo-container nav-logo-container">
         <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +24,7 @@
       
       <div class="nav-items">
           <nuxt-link class="nuxt-link projects-link" to="#projects">PROJECTS</nuxt-link>
-          <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link>
+          <!-- <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link> -->
           <nuxt-link class="nuxt-link contact-link" to="#contact">CONTACT</nuxt-link>
       </div>
     </nav>
@@ -72,6 +71,10 @@ import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 
 const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 1.8, delay:0 })
+const lerp = (start: number, end: number, amount: number) => {
+	return (1 - amount) * start + amount * end
+}
+
 onMounted(() => {
 	timeline.play(0)
 	timeline.fromTo(
@@ -100,9 +103,96 @@ onMounted(() => {
   timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%',opacity: 0 }, { width: '55vw', borderRadius: '32px',opacity: 1 })
   timeline.fromTo('.nuxt-link', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.35 })
   timeline.fromTo('.nav-logo-container', { opacity: 0 }, { opacity: 1 })
+
+  const cursor = document.createElement('div')
+	cursor.className = 'cursor'
+
+	const cursorF = document.createElement('div')
+	cursorF.className = 'cursor-f'
+	let cursorX = 0
+	let cursorY = 0
+	let pageX = 0
+	let pageY = 0
+	const size = 8
+	const sizeF = 36
+	const followSpeed = 0.16
+
+	document.body.appendChild(cursor)
+	document.body.appendChild(cursorF)
+
+	if ('ontouchstart' in window) {
+		cursor.style.display = 'none'
+		cursorF.style.display = 'none'
+	}
+
+	cursor.style.setProperty('--size', size + 'px')
+	cursorF.style.setProperty('--size', sizeF + 'px')
+
+	window.addEventListener('mousemove', function (e) {
+		pageX = e.clientX
+		pageY = e.clientY
+		cursor.style.left = e.clientX - size / 2 + 'px'
+		cursor.style.top = e.clientY - size / 2 + 'px'
+	})
+
+	function loop() {
+		cursorX = lerp(cursorX, pageX, followSpeed)
+		cursorY = lerp(cursorY, pageY, followSpeed)
+		cursorF.style.top = cursorY - sizeF / 2 + 'px'
+		cursorF.style.left = cursorX - sizeF / 2 + 'px'
+		requestAnimationFrame(loop)
+	}
+	loop()
+
+	// Cursor Invent Target Touches
+	let startY: any
+	let endY: any
+	let clicked = false
+
+	function mousedown(e: any) {
+		gsap.to(cursor, { scale: 4.5 })
+		gsap.to(cursorF, { scale: 0.4 })
+
+		clicked = true
+		startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY
+	}
+
+	function mouseup(e: any) {
+		gsap.to(cursor, { scale: 1 })
+		gsap.to(cursorF, { scale: 1 })
+
+		endY = e.clientY || endY
+		// if (clicked && startY && Math.abs(startY - endY) >= 40) {
+		// 	go(!Math.min(0, startY - endY) ? 1 : -1)
+		// 	clicked = false
+		// 	startY = null
+		// 	endY = null
+		// }
+	}
+
+	window.addEventListener('mousedown', mousedown, false)
+	window.addEventListener('touchstart', mousedown, false)
+	window.addEventListener(
+		'touchmove',
+		function (e) {
+			if (clicked) {
+				endY = e.touches[0].clientY || e.targetTouches[0].clientY
+			}
+		},
+		false
+	)
+	window.addEventListener('touchend', mouseup, false)
+	window.addEventListener('mouseup', mouseup, false)
+
+	//Mouse Wheel Scroll Transition
+	let scrollTimeout: any
+	function wheel(e: any) {
+		clearTimeout(scrollTimeout)
+	}
+	window.addEventListener('mousewheel', wheel, false)
+	window.addEventListener('wheel', wheel, false)
 })
 
-const replay = () => timeline.seek(0)
 </script>
 
 <style>
@@ -197,7 +287,7 @@ nav {
   right: 0;
   bottom: 0;
 	background: linear-gradient(to left, #cf59e6, #8000ff);
-  /* background: #10101a; */
+  /* background: #101010; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
