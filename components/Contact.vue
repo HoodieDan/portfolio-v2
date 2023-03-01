@@ -94,7 +94,7 @@ onMounted(()=>{
 	position: relative;
 	background: transparent;
 	height: 40rem;
-    max-width: 99vw !important;
+    max-width: 95vw !important;
 }
 
 .header {

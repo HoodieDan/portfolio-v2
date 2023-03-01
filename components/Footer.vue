@@ -78,9 +78,13 @@ p {
     color: #fff;
 }
 
-/* @media (max-width:575px) {
-    .foot {
-        padding: 0.75rem 1.5rem;
+@media (max-width:575px) {
+    .logo-container {
+        transform: scale(0.4);
     }
-} */
+
+    .foot {
+        padding-left: 0;
+    }
+}
 </style>
