@@ -4,15 +4,27 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'portfolio-v2',
+    title: 'Daniel Obode - Frontend Developer',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Daniel Obode the Frontend Web Developer.' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Daniel Obode a.k.a Hoodiedan is a Frontend Engineer based in Lagos, Nigeria. He specializes in using frontend frameworks to convert UI mockups to sleek high performant websites and web applications.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'author', content: 'Daniel Obode' },
+
+      { hid: 'og-type', property: 'og:type', content: 'website' },
+      { hid: 'og-desc', property:'og:description', content: 'Daniel Obode a.k.a Hoodiedan is a Frontend Engineer based in Lagos, Nigeria. He specializes in using frontend frameworks to convert UI mockups to sleek high performant websites and web applications.' },
+      { hid: 'og-image', property:'og:image', content: './assets/images/handsome.jpeg' },
+      { hid: 'og-title', property:'og:title', content: 'Daniel Obode - Frontend Developer' },
+      // { hid: 'og-url', property: 'og:url', content: 'https://domain.com/my-post' },
+
+      { hid: 'description', name:'twitter:description', content: 'Daniel Obode a.k.a Hoodiedan is a Frontend Engineer based in Lagos, Nigeria. He specializes in using frontend frameworks to convert UI mockups to sleek high performant websites and web applications.' },
+      { hid: 'image', name:'twitter:image', content: './assets/images/handsome.jpeg' },
+      { hid: 'title', name:'twitter:title', content: 'Daniel Obode - Frontend Developer' },
+      { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

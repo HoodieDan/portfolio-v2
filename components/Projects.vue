@@ -338,7 +338,7 @@ canvas {
     }
 
     div.project {
-        width: 90%;
+        width: 80%;
         display: block;
         padding: 2rem;
         /* backdrop-filter: blur(0px); */

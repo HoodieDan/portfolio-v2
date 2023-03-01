@@ -192,6 +192,10 @@ nav {
 	height: 100vh;
 	width: 100vw;
 	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 	background: linear-gradient(to left, #cf59e6, #8000ff);
   /* background: #10101a; */
 	display: flex;
@@ -379,6 +383,7 @@ div.d-container {
   nav {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-top: 1.2rem;
   }
 
   .nav-items {
