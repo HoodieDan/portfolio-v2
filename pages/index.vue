@@ -2,11 +2,11 @@
 	<div class="body">
     <div class="nav-items">
         <!-- <nuxt-link class="nuxt-link projects-link" to="#projects">PROJECTS</nuxt-link> -->
-        <h4 class="name text-gradient">Daniel Obode</h4>
+        <h4 class="name">Daniel Obode</h4>
         <!-- <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link> -->
         <!-- <nuxt-link class="nuxt-link contact-link" to="#contact">CONTACT</nuxt-link> -->
-        <a href="tel:+2349039335002" class="nuxt-link"><i class="fa-solid fa-phone text-gradient"></i> CALL</a>
-        <a class="nuxt-link" href="mailto:obodedaniel3@gmail.com"><i class="fa-regular fa-envelope text-gradient"></i> EMAIL</a>
+        <a href="tel:+2349039335002" class="nuxt-link"><i class="fa-solid fa-phone text-gradient"></i> <span>CALL</span></a>
+        <a class="nuxt-link" href="mailto:obodedaniel3@gmail.com"><i class="fa-regular fa-envelope text-gradient"></i> <span>EMAIL</span></a>
     </div>
     <div id="body">
       <nav>
@@ -91,8 +91,10 @@ const options = {
 onMounted(() => {
   const myText = new SplitType('#heading')
 
-  //@ts-ignore
-  Scrollbar.init(document.querySelector('#body'), options);
+  if (window.innerWidth >= 1200) {
+    //@ts-ignore
+    Scrollbar.init(document.querySelector('#body'), options);
+  }
 
 	timeline.play(0)
 	timeline.fromTo(
@@ -284,7 +286,8 @@ nav {
 
 .nuxt-link::before {
     content: "";
-    background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff);
+    /* background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff); */
+    background: #fff;
     height: 1px;
     width: 30%;
     position: absolute;
@@ -500,7 +503,7 @@ div.d-container {
   }
 
   .nav-items {
-    width: 70vw;
+    width: 70vw !important;
     right: 1rem;
   }
 
@@ -523,7 +526,7 @@ div.d-container {
 
 @media (max-width: 420px) {
   h4.name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .nav-items {
@@ -533,6 +536,19 @@ div.d-container {
 
   .nuxt-link {
     font-size: 0.5rem;
+  }
+
+  .nuxt-link::before {
+    width: 0;
+  }
+}
+@media (max-width: 320px) {
+  .nav-items {
+    width: 60vw !important;
+  }
+
+  .nuxt-link span {
+    display: none;
   }
 }
 </style>

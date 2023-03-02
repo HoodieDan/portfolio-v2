@@ -43,10 +43,10 @@
             <p>Connect with me on my socials!</p>
 
             <div class="socials">
-                <a class="brand" href="https://github.com/HoodieDan" target="__blank"><span class="github"><i class="link fa-brands fa-github"></i></span>GITHUB</a>
-                <a class="brand" href="https://instagram.com/the.7th.kind" target="__blank"><span class="instagram"><i class="link fa-brands fa-instagram"></i></span>INSTAGRAM</a>
-                <a class="brand" href="https://twitter.com/osemuu" target="__blank"><span class="twitter"><i class="link fa-brands fa-twitter"></i></span>TWITTER</a>
-                <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><span class="linkedin"><i class="link fa-brands fa-linkedin"></i></span>LINKEDIN</a>
+                <a class="brand" href="https://github.com/HoodieDan" target="__blank"><span class="github"><i class="link fa-brands fa-github"></i></span><span class="network">GITHUB</span></a>
+                <a class="brand" href="https://instagram.com/the.7th.kind" target="__blank"><span class="instagram"><i class="link fa-brands fa-instagram"></i></span><span class="network">INSTAGRAM</span></a>
+                <a class="brand" href="https://twitter.com/osemuu" target="__blank"><span class="twitter"><i class="link fa-brands fa-twitter"></i></span><span class="network">TWITTER</span></a>
+                <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><span class="linkedin"><i class="link fa-brands fa-linkedin"></i></span><span class="network">LINKEDIN</span></a>
             </div>
         </div>
     </div>
@@ -344,6 +344,9 @@ div.logo-contain.card-logo {
     .logo {
         right: 4.3rem;
     }
+    .network {
+        display: none;
+    }
 }
 
 @media (max-width: 360px) {
@@ -355,4 +358,5 @@ div.logo-contain.card-logo {
         right: 4.2rem;
     }
 }
+
 </style>
