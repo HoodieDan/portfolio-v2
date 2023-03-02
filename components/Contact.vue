@@ -43,10 +43,10 @@
             <p>Connect with me on my socials!</p>
 
             <div class="socials">
-                <a class="brand" href="https://github.com/HoodieDan" target="__blank"><span class="github"><i class="link fa-brands fa-github"></i></span><span class="network">GITHUB</span></a>
-                <a class="brand" href="https://instagram.com/the.7th.kind" target="__blank"><span class="instagram"><i class="link fa-brands fa-instagram"></i></span><span class="network">INSTAGRAM</span></a>
-                <a class="brand" href="https://twitter.com/osemuu" target="__blank"><span class="twitter"><i class="link fa-brands fa-twitter"></i></span><span class="network">TWITTER</span></a>
-                <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><span class="linkedin"><i class="link fa-brands fa-linkedin"></i></span><span class="network">LINKEDIN</span></a>
+                <a class="brand" href="https://github.com/HoodieDan" target="__blank"><span class="github"><i class="link fa-brands fa-github"></i></span><span class="network">GITHUB</span><span class="sf">GH</span></a>
+                <a class="brand" href="https://instagram.com/the.7th.kind" target="__blank"><span class="instagram"><i class="link fa-brands fa-instagram"></i></span><span class="network">INSTAGRAM</span><span class="sf">IG</span></a>
+                <a class="brand" href="https://twitter.com/osemuu" target="__blank"><span class="twitter"><i class="link fa-brands fa-twitter"></i></span><span class="network">TWITTER</span><span class="sf">TW</span></a>
+                <a class="brand" href="https://www.linkedin.com/in/daniel-obode-334144195/" target="__blank"><span class="linkedin"><i class="link fa-brands fa-linkedin"></i></span><span class="network">LINKEDIN</span><span class="sf">IN</span></a>
             </div>
         </div>
     </div>
@@ -232,6 +232,10 @@ div.logo-contain.card-logo {
     position: relative;
 }
 
+.sf {
+    display: none;
+}
+
 .link {
     /* font-size: 1.5rem; */
     padding-right: 0.3rem;
@@ -346,6 +350,9 @@ div.logo-contain.card-logo {
     }
     .network {
         display: none;
+    }
+    .sf {
+        display: inline-block;
     }
 }
 

@@ -213,8 +213,8 @@ h1.header {
     border: 1px solid #252525;
     width: 60%;
     border-radius: 32px;
-    backdrop-filter: blur(54px);
-    background: linear-gradient(180deg, rgba(240, 224, 224, 0.1) , #101010);
+    backdrop-filter: blur(104px);
+    background: linear-gradient(180deg, rgba(42,43,56,.5) , #101010);
     display: flex;
 }
 
@@ -348,7 +348,7 @@ canvas {
     }
 
     div.project {
-        width: 85%;
+        width: 90%;
         display: block;
         padding: 2rem;
         /* backdrop-filter: blur(0px); */

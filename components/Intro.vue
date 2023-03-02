@@ -199,9 +199,6 @@ p.me {
 }
 
 @media (max-width: 575px) {
-    /* .header {
-        font-size: 3.2rem;
-    } */
     
     .socials {
         padding-top: 5rem;
@@ -227,5 +224,15 @@ p.me {
         width: 100%;
         text-align: center;
     }
+}
+
+@media (max-width: 420px) {
+    .projects {
+        font-size: 0.8rem;
+    }
+    
+    /* .header {
+        font-size: 3rem;
+    } */
 }
 </style>
