@@ -17,7 +17,7 @@ export default {
 
       { hid: 'og-type', property: 'og:type', content: 'website' },
       { hid: 'og-desc', property:'og:description', content: 'Daniel Obode a.k.a Hoodiedan is a Frontend Engineer based in Lagos, Nigeria. He specializes in using frontend frameworks to convert UI mockups to sleek high performant websites and web applications.' },
-      { hid: 'og-image', property:'og:image', content: './assets/images/my-logo.jpeg' },
+      { hid: 'og:image', property:'og:image', content: './my-logo.jpeg' },
       { hid: 'og-title', property:'og:title', content: 'Daniel Obode - Frontend Developer' },
       // { hid: 'og-url', property: 'og:url', content: 'https://domain.com/my-post' },
 
@@ -27,7 +27,7 @@ export default {
       { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './assets/images/my-logo.jpeg' },
+      { rel: 'icon', type: 'image/x-icon', href: './my-logo.jpeg' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css' },
       { rel:"preconnect", href:"https://fonts.googleapis.com" },
       { rel:"preconnect", href:"https://fonts.gstatic.com", crossOriginIsolated: true },
