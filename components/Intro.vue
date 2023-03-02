@@ -26,7 +26,21 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+// import LocomotiveScroll from 'locomotive-scroll'
 
+onMounted(()=>{
+    // new LocomotiveScroll({
+    //     el: document.querySelector('.content'),
+    //     smooth: true,
+    //     smartphone: {
+    //         smooth: true,
+    //     },
+    //     tablet: {
+    //         smooth: true,
+    //     },
+    // });
+})
 </script>
 
 <style scoped>

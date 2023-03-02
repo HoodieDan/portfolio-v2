@@ -1,81 +1,99 @@
 <template>
 	<div class="body">
-    <nav>
-      <div class="logo-container nav-logo-container">
-        <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-          <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-          <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
-        </svg>
-
-        <div class="logo nav-logo">
-          <div class="d-container">
-            <div class="d"></div>
-          </div>
-          <div class="o"></div>
-        </div>
-      </div>
-
-      
-      <div class="nav-items">
-          <nuxt-link class="nuxt-link projects-link" to="#projects">PROJECTS</nuxt-link>
-          <!-- <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link> -->
-          <nuxt-link class="nuxt-link contact-link" to="#contact">CONTACT</nuxt-link>
-      </div>
-    </nav>
-
-		<div class="welcome">
-      <div class="loader-container">
-        <svg class="logo-border bord" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-          <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
-          <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
-          <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
-        </svg>
-
-        <div class="logo nav-logo">
-          <div class="d-container">
-            <div class="d"></div>
-          </div>
-          <div class="o"></div>
-        </div>
-      </div>
-			<h1 class="heading">Daniel Obode</h1>
-			<h3 class="sub-heading">Frontend Developer</h3>
-			<!-- <div class="loader-wrapper">
-				<div class="loader"></div>
-			</div> -->
-		</div>
-
-		<div class="content">
-      <Intro />
-      <Projects />
-      <Contact />
-      <Footer />
+    <div class="nav-items">
+        <!-- <nuxt-link class="nuxt-link projects-link" to="#projects">PROJECTS</nuxt-link> -->
+        <h4 class="name text-gradient">Daniel Obode</h4>
+        <!-- <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link> -->
+        <!-- <nuxt-link class="nuxt-link contact-link" to="#contact">CONTACT</nuxt-link> -->
+        <a href="tel:+2349039335002" class="nuxt-link"><i class="fa-solid fa-phone text-gradient"></i> CALL</a>
+        <a class="nuxt-link" href="mailto:obodedaniel3@gmail.com"><i class="fa-regular fa-envelope text-gradient"></i> EMAIL</a>
     </div>
+    <div id="body">
+      <nav>
+        <div class="logo-container nav-logo-container">
+          <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+            <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+            <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
+          </svg>
 
+          <div class="logo nav-logo">
+            <div class="d-container">
+              <div class="d"></div>
+            </div>
+            <div class="o"></div>
+          </div>
+        </div>
+
+        
+      </nav>
+
+      <div class="welcome">
+        <div class="loader-container">
+          <svg class="logo-border bord" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+            <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+            <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
+            <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
+          </svg>
+
+          <div class="logo nav-logo">
+            <div class="d-container">
+              <div class="d"></div>
+            </div>
+            <div class="o"></div>
+          </div>
+        </div>
+        <h1 class="heading" id="heading">Daniel Obode</h1>
+        <h3 class="sub-heading">Frontend Developer</h3>
+        <div class="loader-wrapper">
+          <div class="loader"></div>
+        </div>
+      </div>
+
+      <div class="content" id="content">
+        <Intro />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+
+    </div>
 	</div>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from 'split-type'
+import Scrollbar from 'smooth-scrollbar';
 
 const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 1.8, delay:0 })
 const lerp = (start: number, end: number, amount: number) => {
 	return (1 - amount) * start + amount * end
 }
+const options = {
+  damping: 0.06,
+  alwaysShowTracks: false,
+  thumbMinSize: 5,
+}
 
 onMounted(() => {
+  const myText = new SplitType('#heading')
+
+  //@ts-ignore
+  Scrollbar.init(document.querySelector('#body'), options);
+
 	timeline.play(0)
 	timeline.fromTo(
 		'.welcome',
@@ -90,10 +108,11 @@ onMounted(() => {
 		}
 	)
 
-	timeline.to('.loading', { display:'none' })
+	// timeline.to('.loading', { display:'none' })
   timeline.to('.body', { alignItems: 'start', justifyContent: 'flex-start' })
 	timeline.fromTo('.logo', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
-	timeline.fromTo('.heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
+	// timeline.fromTo('.heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
+  timeline.fromTo('.char', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.2, duration: 0.1, opacity: 1 })
 	timeline.fromTo('.sub-heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
   timeline.fromTo('.bord', { animation: 'none' }, { animationName: 'spin', animationDuration: '1.5s', animationDirection: 'forwards' })
 	timeline.fromTo('.loader-wrapper',{y: '-30px', opacity: 0}, {y:0, opacity: 1 })
@@ -103,6 +122,8 @@ onMounted(() => {
   timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%',opacity: 0 }, { width: '55vw', borderRadius: '32px',opacity: 1 })
   timeline.fromTo('.nuxt-link', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.35 })
   timeline.fromTo('.nav-logo-container', { opacity: 0 }, { opacity: 1 })
+
+  gsap.registerPlugin(ScrollTrigger)
 
   const cursor = document.createElement('div')
 	cursor.className = 'cursor'
@@ -129,10 +150,10 @@ onMounted(() => {
 	cursorF.style.setProperty('--size', sizeF + 'px')
 
 	window.addEventListener('mousemove', function (e) {
-		pageX = e.clientX
-		pageY = e.clientY
-		cursor.style.left = e.clientX - size / 2 + 'px'
-		cursor.style.top = e.clientY - size / 2 + 'px'
+		pageX = e.pageX
+		pageY = e.pageY
+		cursor.style.left = e.pageX - size / 2 + 'px'
+		cursor.style.top = e.pageY - size / 2 + 'px'
 	})
 
 	function loop() {
@@ -154,14 +175,14 @@ onMounted(() => {
 		gsap.to(cursorF, { scale: 0.4 })
 
 		clicked = true
-		startY = e.clientY || e.touches[0].clientY || e.targetTouches[0].clientY
+		startY = e.pageY || e.touches[0].pageY || e.targetTouches[0].pageY
 	}
 
 	function mouseup(e: any) {
 		gsap.to(cursor, { scale: 1 })
 		gsap.to(cursorF, { scale: 1 })
 
-		endY = e.clientY || endY
+		endY = e.pageY || endY
 		// if (clicked && startY && Math.abs(startY - endY) >= 40) {
 		// 	go(!Math.min(0, startY - endY) ? 1 : -1)
 		// 	clicked = false
@@ -176,7 +197,7 @@ onMounted(() => {
 		'touchmove',
 		function (e) {
 			if (clicked) {
-				endY = e.touches[0].clientY || e.targetTouches[0].clientY
+				endY = e.touches[0].pageY || e.targetTouches[0].pageY
 			}
 		},
 		false
@@ -235,19 +256,19 @@ nav {
 }
 
 .nav-items {
-    height: 4.4rem;
-    width: 55vw;
-    display: flex;
-    justify-content: space-around;
-    align-self: flex-start;
-    backdrop-filter: blur(10px);
-    background-color: #10101a; /* Fallback color */
-    background-color: rgba(240, 224, 224, 0.1); 
-    border: 1px solid #252525;
-    position: fixed;
-    right: 3.5rem;
-    border-radius: 32px;
-    z-index: 9;
+  height: 4.4rem;
+  width: 55vw;
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-start;
+  backdrop-filter: blur(104px);
+  background-color: rgba(42,43,56,.5); 
+  border: 1px solid #252525;
+  position: fixed !important;
+  top: 2rem;
+  right: 3.5rem;
+  border-radius: 1rem;
+  z-index: 9;
 }
 
 .nav-logo-container {
@@ -263,7 +284,7 @@ nav {
 
 .nuxt-link::before {
     content: "";
-    background: #fff;
+    background: linear-gradient(to left, #6bc5f8, #cf59e6, #8000ff);
     height: 1px;
     width: 30%;
     position: absolute;
@@ -302,7 +323,9 @@ nav {
 .heading {
 	font-size: 2rem;
 	margin-bottom: 0px;
-	opacity: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  line-height: 3rem;
+	/* opacity: 0; */
 }
 
 .sub-heading {
@@ -314,7 +337,7 @@ nav {
 }
 
 .loader-wrapper {
-	height: 2px;
+	height: 0.2;
 	width: 10rem;
 	background: #ededed;
 	border-radius: 100px;
@@ -322,11 +345,11 @@ nav {
 }
 
 .loader {
-	height: 0.2rem;
+	height: 100%;
 	width: 10rem;
 	background: #fff;
 	border-radius: 100px;
-	background: #585858;
+	/* background: #585858; */
 }
 
 .content {
@@ -495,6 +518,21 @@ div.d-container {
 
   .loader-logo {
     transform: scale(0.9);
+  }
+}
+
+@media (max-width: 420px) {
+  h4.name {
+    font-size: 0.9rem;
+  }
+
+  .nav-items {
+    height: 3.5rem;
+    top: 1.8rem;
+  }
+
+  .nuxt-link {
+    font-size: 0.5rem;
   }
 }
 </style>

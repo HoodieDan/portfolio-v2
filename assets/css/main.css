@@ -6,12 +6,12 @@ body {
 	font-family: 'Poppins';
 	color: #fff;
     scroll-behavior: smooth;
-    /* cursor: none; */
     transition: all 0.8s ease-out;
 }
 
 * {
     -webkit-box-sizing: border-box;
+    cursor: none;
 	box-sizing: border-box;
 }
 
@@ -23,6 +23,17 @@ p {
 a {
     text-decoration: none;
     color: #fff;
+}
+
+#body {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.char {
+    /* transform: translateY(115px); */
+    transition: transform 0.5s;
 }
 
 .text-center {
@@ -85,6 +96,7 @@ canvas {
     mix-blend-mode: difference;
     pointer-events: none;
     opacity: 0.5;
+    z-index: 999;
 }
 
 .fade-enter-active,

@@ -126,6 +126,7 @@
 <script setup lang="ts">
 import hoverEffect from 'hover-effect';
 import { onMounted } from 'vue';
+// import LocomotiveScroll from 'locomotive-scroll'
 
 onMounted(()=>{
     // image hover effect
@@ -145,6 +146,17 @@ onMounted(()=>{
         });
       }
     );
+
+    // new LocomotiveScroll({
+    //     el: document.querySelector('.content'),
+    //     smooth: true,
+    //     smartphone: {
+    //         smooth: true,
+    //     },
+    //     tablet: {
+    //         smooth: true,
+    //     },
+    // });
 })
 </script>
 
@@ -336,7 +348,7 @@ canvas {
     }
 
     div.project {
-        width: 80%;
+        width: 85%;
         display: block;
         padding: 2rem;
         /* backdrop-filter: blur(0px); */
