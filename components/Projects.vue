@@ -6,8 +6,11 @@
             
             <!-- Project one -->
             <div class="project row">
-                <div class="project-left col-5" data-displacement="../assets/images/diss.png">
-                    <!-- <div class="distortion"></div> -->
+                <div class="project-left col-5" data-displacement="../assets/images/diss.png"
+                    data-intensity="0.2"
+                    data-speedIn="1.6"
+                    data-speedOut="1.6"
+                >
                     <img src="https://images.pexels.com/photos/5081918/pexels-photo-5081918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tektalk">
                     <img class="img-fluid project-image" src="../assets/images/Tektalk-logo.jpeg" alt="Tektalk Logo">
                     <img src="../assets/images/diss.png" alt="displacement image">
@@ -34,8 +37,11 @@
 
             <!-- Project two -->
             <div class="project row">
-                <div class="project-left col-5" data-displacement="../assets/images/diss.png">
-                    <!-- <div class="distortion"></div> -->
+                <div class="project-left col-5" data-displacement="../assets/images/diss.png"
+                    data-intensity="0.2"
+                    data-speedIn="1.6"
+                    data-speedOut="1.6"
+                >
                     <img src="https://images.pexels.com/photos/1838640/pexels-photo-1838640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Real Estate">
                     <img class="img-fluid project-image" src="../assets/images/real-estate-logo.png" alt="Real Estate Logo">
                     <img src="../assets/images/diss.png" alt="displacement image">
@@ -62,8 +68,11 @@
 
             <!-- Project three -->
             <div class="project row">
-                <div class="project-left col-5" data-displacement="../assets/images/diss.png">
-                    <!-- <div class="distortion"></div> -->
+                <div class="project-left col-5" data-displacement="../assets/images/diss.png"
+                    data-intensity="0.2"
+                    data-speedIn="1.6"
+                    data-speedOut="1.6"
+                >
                     <img src="https://images.pexels.com/photos/4709825/pexels-photo-4709825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Drew Music">
                     <img class="img-fluid project-image" src="../assets/images/drew-music-logo.png" alt="Drew Music Logo">
                     <img src="../assets/images/diss.png" alt="displacement image">
@@ -90,8 +99,11 @@
 
             <!-- Project four -->
             <div class="project row">
-                <div class="project-left col-5"  data-displacement="../assets/images/diss.png">
-                    <!-- <div class="distortion"></div> -->
+                <div class="project-left col-5"  data-displacement="../assets/images/diss.png" 
+                    data-intensity="0.2"
+                    data-speedIn="1.6"
+                    data-speedOut="1.6"
+                >
                     <img src="https://images.pexels.com/photos/9129527/pexels-photo-9129527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Twitter">
                     <img class="img-fluid project-image" src="../assets/images/twitter-logo.jpg" alt="Twitter Logo">
                     <img src="../assets/images/diss.png" alt="displacement image">
@@ -126,7 +138,6 @@
 <script setup lang="ts">
 import hoverEffect from 'hover-effect';
 import { onMounted } from 'vue';
-// import LocomotiveScroll from 'locomotive-scroll'
 
 onMounted(()=>{
     // image hover effect
@@ -146,17 +157,6 @@ onMounted(()=>{
         });
       }
     );
-
-    // new LocomotiveScroll({
-    //     el: document.querySelector('.content'),
-    //     smooth: true,
-    //     smartphone: {
-    //         smooth: true,
-    //     },
-    //     tablet: {
-    //         smooth: true,
-    //     },
-    // });
 })
 </script>
 
@@ -219,11 +219,13 @@ h1.header {
 }
 
 .project-left {
-    width: 40%;
+    width: 50%;
     height: 25rem;
     margin-right: 2rem;
     border-radius: 16px;
     position: relative;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .project-left img {
@@ -236,13 +238,13 @@ h1.header {
     display: none;
 }
 
-.project-left.distortion {
+/* .project-left.distortion {
     max-width: 100%;
     max-height: 100%;
     width: 20rem;
     height: 40rem;
-    /* object-fit: cover; */
-}
+    object-fit: cover;
+} */
 
 .project-right {
     display: flex;
@@ -348,7 +350,7 @@ canvas {
     }
 
     div.project {
-        width: 90%;
+        width: 87%;
         display: block;
         padding: 2rem;
         /* backdrop-filter: blur(0px); */

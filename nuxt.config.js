@@ -17,12 +17,12 @@ export default {
 
       { hid: 'og-type', property: 'og:type', content: 'website' },
       { hid: 'og-desc', property:'og:description', content: 'Daniel Obode a.k.a Hoodiedan is a Frontend Engineer based in Lagos, Nigeria. He specializes in using frontend frameworks to convert UI mockups to sleek high performant websites and web applications.' },
-      { hid: 'og:image', property:'og:image', content: './my-logo.jpeg' },
+      { hid: 'og-image', property:'og:image', content: './my-logo.jpeg' },
       { hid: 'og-title', property:'og:title', content: 'Daniel Obode - Frontend Developer' },
       // { hid: 'og-url', property: 'og:url', content: 'https://domain.com/my-post' },
 
       { hid: 'description', name:'twitter:description', content: 'Daniel Obode a.k.a Hoodiedan is a Frontend Engineer based in Lagos, Nigeria. He specializes in using frontend frameworks to convert UI mockups to sleek high performant websites and web applications.' },
-      { hid: 'image', name:'twitter:image', content: './assets/images/handsome.jpeg' },
+      { hid: 'image', name:'twitter:image', content: './my-logo.jpeg' },
       { hid: 'title', name:'twitter:title', content: 'Daniel Obode - Frontend Developer' },
       { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
     ],
@@ -83,9 +83,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    // { src:'~/plugins/cursor-fx.client.ts', ssr: false}
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

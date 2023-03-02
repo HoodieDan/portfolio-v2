@@ -77,23 +77,36 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type'
 import Scrollbar from 'smooth-scrollbar';
+import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
 
 const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 1.8, delay:0 })
 const lerp = (start: number, end: number, amount: number) => {
 	return (1 - amount) * start + amount * end
 }
+
+const overscrollOptions = {
+  effect: 'bounce',
+  damping: 0.1,
+}
+
 const options = {
   damping: 0.06,
   alwaysShowTracks: false,
   thumbMinSize: 5,
+  plugins: {
+    overscroll: overscrollOptions,
+  },
 }
 
 onMounted(() => {
   const myText = new SplitType('#heading')
+  Scrollbar.use(OverscrollPlugin)
 
   if (window.innerWidth >= 1200) {
     //@ts-ignore
-    Scrollbar.init(document.querySelector('#body'), options);
+    Scrollbar.init(document.querySelector('#body'),
+     options
+    );
   }
 
 	timeline.play(0)

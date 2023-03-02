@@ -20,7 +20,6 @@
                 <div class="o"></div>
                 </div>
             </div>
-            <!-- <h2 class="text-gradient">Daniel Obode</h2> -->
             <p>Top 10% VueJS Developer.</p>
         </div>
 
