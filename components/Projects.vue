@@ -309,7 +309,6 @@ button.info {
     color: #A9A9A9;
     align-self: flex-end;
     transition: all 0.8s ease-out;
-    cursor: pointer;
 }
 
 button.info:hover {
@@ -318,7 +317,7 @@ button.info:hover {
 }
 
 button.info i {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 canvas {
@@ -351,7 +350,7 @@ canvas {
         width: 87%;
         display: block;
         padding: 2rem;
-        border-radius: 2rem;
+        border-radius: 2.5rem;
         /* backdrop-filter: blur(0px); */
     }
 

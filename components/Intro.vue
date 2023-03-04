@@ -10,7 +10,7 @@
              the web.
         </h1>
 
-        <div class="project-link-div" id="mobile-animate">
+        <div class="project-link-div" id="mobile-animate" @click="goToProjects">
             <nuxtLink to="#projects" class="projects">VIEW PROJECTS</nuxtLink>
         </div>
 
@@ -27,19 +27,13 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-// import LocomotiveScroll from 'locomotive-scroll'
+import { gsap } from 'gsap'
+
+const goToProjects = () => {
+    gsap.to( window, { duration: 2, scrollTo: '#projects' } )
+  }
 
 onMounted(()=>{
-    // new LocomotiveScroll({
-    //     el: document.querySelector('.content'),
-    //     smooth: true,
-    //     smartphone: {
-    //         smooth: true,
-    //     },
-    //     tablet: {
-    //         smooth: true,
-    //     },
-    // });
 })
 </script>
 

@@ -135,6 +135,10 @@ onMounted(() => {
     );
   }
 
+  // const goToProjects = () => {
+  //   gsap.to( window, { duration: 2, scrollTo: '#projects' } )
+  // }
+
 	timeline.play(0)
 	timeline.fromTo(
 		'.welcome',
@@ -165,6 +169,8 @@ onMounted(() => {
   timeline.fromTo('.nav-logo-container', { opacity: 0 }, { opacity: 1 })
 
   gsap.registerPlugin(ScrollTrigger)
+
+
 
   const cursor = document.createElement('div')
 	cursor.className = 'cursor'
@@ -224,12 +230,6 @@ onMounted(() => {
 		gsap.to(cursorF, { scale: 1 })
 
 		endY = e.pageY || endY
-		// if (clicked && startY && Math.abs(startY - endY) >= 40) {
-		// 	go(!Math.min(0, startY - endY) ? 1 : -1)
-		// 	clicked = false
-		// 	startY = null
-		// 	endY = null
-		// }
 	}
 
 	window.addEventListener('mousedown', mousedown, false)
@@ -258,7 +258,7 @@ onMounted(() => {
 
 	if (window.innerWidth > 575) {
     let scene = new ScrollMagic.Scene({
-      triggerElement: '#animate',
+      triggerElement: '.triangle',
             duration: 500
     })
       .setTween('.logo-bg', {
@@ -348,7 +348,6 @@ nav {
 
 .nav-logo-container {
   transform: scale(0.8);
-  position: absolute;
 }
 
 .nuxt-link {
@@ -615,6 +614,10 @@ div.d-container {
 
   .nuxt-link::before {
     width: 0;
+  }
+
+  .nav-logo-container {
+    transform: scale(0.7);
   }
 }
 @media (max-width: 320px) {

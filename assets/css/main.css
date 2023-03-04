@@ -5,7 +5,7 @@ body {
 	background: #101010;
 	font-family: 'Poppins';
 	color: #fff;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     transition: all 0.8s ease-out;
 }
 
@@ -120,6 +120,6 @@ canvas {
 
 @media (max-width: 575px) {
     canvas {
-        border-radius: 2rem;
+        border-radius: 1rem;
     }
 }
