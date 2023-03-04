@@ -3,7 +3,7 @@
         <div class="bod center" id="contact">
         
             <h1 class="header">Get in <span class="text-gradient">touch</span>!</h1>
-            <p class="text-center header-baby">I am currently looking for new opportunities. If you think we can make magic together, contact me and let's talk!</p>
+            <p class="text-center header-baby">I would love to hear about your idea. If you think we can make magic together, contact me and let's talk!</p>
             <p class="text-center">Click on <strong class="text-gradient">the card!</strong></p>
 
             <div class="contain" @click.self="onClick">
@@ -157,7 +157,7 @@ onMounted(()=>{
     position: relative;
     transform: scale(0.6);
     bottom: 4.2rem;
-    right: 6.6rem;
+    right: 6.4rem;
 }
 
 .logo-border {

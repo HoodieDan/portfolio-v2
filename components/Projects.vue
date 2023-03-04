@@ -98,8 +98,8 @@
             </div>
 
             <!-- Project four -->
-            <div class="project row">
-                <div class="project-left col-5"  data-displacement="../assets/images/diss.png" 
+            <div class="project">
+                <div class="project-left"  data-displacement="../assets/images/diss.png" 
                     data-intensity="0.2"
                     data-speedIn="1.6"
                     data-speedOut="1.6"
@@ -108,7 +108,7 @@
                     <img class="img-fluid project-image" src="../assets/images/twitter-logo.jpg" alt="Twitter Logo">
                     <img src="../assets/images/diss.png" alt="displacement image">
                 </div>
-                <div class="project-right col-7">
+                <div class="project-right">
                     <div>
                         <h1 class="twitter-color">Twitter Clone</h1>
                         <p>No, it's not actually Twitter but don't worry, I had a hard time differentiating it too.</p>
@@ -161,9 +161,6 @@ onMounted(()=>{
 </script>
 
 <style scoped>
-.container {
-    max-width: 100vw;
-}
 
 h1.header {
     padding-left: 3.5rem;
@@ -212,14 +209,14 @@ h1.header {
     padding: 3rem;
     border: 1px solid #252525;
     width: 60%;
-    border-radius: 32px;
+    border-radius: 5rem;
     backdrop-filter: blur(104px);
     background: linear-gradient(180deg, rgba(42,43,56,.5) , #101010);
     display: flex;
 }
 
 .project-left {
-    width: 50%;
+    width: 45%;
     height: 25rem;
     margin-right: 2rem;
     border-radius: 16px;
@@ -247,6 +244,7 @@ h1.header {
 } */
 
 .project-right {
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -353,13 +351,22 @@ canvas {
         width: 87%;
         display: block;
         padding: 2rem;
+        border-radius: 2rem;
         /* backdrop-filter: blur(0px); */
+    }
+
+    canvas {
+        border-radius: 2rem !important;
     }
 
     div.project-left {
         height: 17rem;
         width: 100%;
         margin-right: 0;
+    }
+
+    div.project-right {
+        width: 100%;
     }
 
     div.links {

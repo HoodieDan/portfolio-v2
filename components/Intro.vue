@@ -1,16 +1,16 @@
 <template>
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="triangle">
             <div class="top"></div>
             <div class="bottom"></div>
         </div>
         <h1 class="header">
-            <span>i create <span class="text-gradient">magic</span></span> <br>
+            <span id="animate">i create <span class="text-gradient">magic</span></span> <br>
             <span>that lives on </span> <br>
              the web.
         </h1>
 
-        <div class="project-link-div">
+        <div class="project-link-div" id="mobile-animate">
             <nuxtLink to="#projects" class="projects">VIEW PROJECTS</nuxtLink>
         </div>
 

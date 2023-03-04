@@ -1,13 +1,28 @@
 <template>
 	<div class="body">
-    <div class="nav-items">
-        <!-- <nuxt-link class="nuxt-link projects-link" to="#projects">PROJECTS</nuxt-link> -->
-        <h4 class="name">Daniel Obode</h4>
-        <!-- <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link> -->
-        <!-- <nuxt-link class="nuxt-link contact-link" to="#contact">CONTACT</nuxt-link> -->
-        <a href="tel:+2349039335002" class="nuxt-link"><i class="fa-solid fa-phone text-gradient"></i> <span>CALL</span></a>
-        <a class="nuxt-link" href="mailto:obodedaniel3@gmail.com"><i class="fa-regular fa-envelope text-gradient"></i> <span>EMAIL</span></a>
+
+    <div class="logo-bg">
+      <div class="logo-container">
+        <svg class="logo-border" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="59" width="5" height="22" transform="rotate(-90 1 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="6" y="59" width="5" height="22" transform="rotate(180 6 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="1" y="1" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+          <rect x="1" y="6" width="5" height="22" transform="rotate(-90 1 6)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="37" y="59" width="5" height="22" transform="rotate(-90 37 59)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="54" y="37" width="5" height="22" fill="white" stroke="white" stroke-width="2" />
+          <rect x="59" y="23" width="5" height="22" transform="rotate(180 59 23)" fill="white" stroke="white" stroke-width="2" />
+          <rect x="37" y="6" width="5" height="22" transform="rotate(-90 37 6)" fill="white" stroke="white" stroke-width="2" />
+        </svg>
+
+        <div class="logo nav-logo">
+          <div class="d-container">
+            <div class="d"></div>
+          </div>
+          <div class="o"></div>
+        </div>
+      </div>
     </div>
+    
     <div id="body">
       <nav>
         <div class="logo-container nav-logo-container">
@@ -30,7 +45,14 @@
           </div>
         </div>
 
-        
+        <div class="nav-items">
+            <!-- <nuxt-link class="nuxt-link projects-link" to="#projects">PROJECTS</nuxt-link> -->
+            <h4 class="name">Daniel Obode</h4>
+            <!-- <nuxt-link class="nuxt-link about-link" to="#about">ABOUT</nuxt-link> -->
+            <!-- <nuxt-link class="nuxt-link contact-link" to="#contact">CONTACT</nuxt-link> -->
+            <a href="tel:+2349039335002" class="nuxt-link"><i class="fa-solid fa-phone text-gradient"></i> <span>CALL</span></a>
+            <a class="nuxt-link" href="mailto:obodedaniel3@gmail.com"><i class="fa-regular fa-envelope text-gradient"></i> <span>EMAIL</span></a>
+        </div>
       </nav>
 
       <div class="welcome">
@@ -73,11 +95,13 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { gsap } from 'gsap'
+import { gsap, TweenMax, TimelineMax } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type'
 import Scrollbar from 'smooth-scrollbar';
 import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
+import * as ScrollMagic from 'scrollmagic' // Or use scrollmagic-with-ssr to avoid server rendering problems
+import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
 
 const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 1.8, delay:0 })
 const lerp = (start: number, end: number, amount: number) => {
@@ -97,6 +121,8 @@ const options = {
     overscroll: overscrollOptions,
   },
 }
+
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
 
 onMounted(() => {
   const myText = new SplitType('#heading')
@@ -134,7 +160,7 @@ onMounted(() => {
 	timeline.fromTo('.loader', { width: '0%' }, { width: '100%', duration: 2.3 })
 	timeline.fromTo('.welcome',{x:0, display:'flex'}, { x: '100vw', display: 'none' })
 	timeline.fromTo('.content', { y: '-30px' }, { y: 0, opacity: 1, stagger: 0.35 })
-  timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%',opacity: 0 }, { width: '55vw', borderRadius: '32px',opacity: 1 })
+  timeline.fromTo('.nav-items', { width: '4.4rem', borderRadius: '50%',opacity: 0 }, { width: '55%', borderRadius: '32px',opacity: 1 })
   timeline.fromTo('.nuxt-link', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.35 })
   timeline.fromTo('.nav-logo-container', { opacity: 0 }, { opacity: 1 })
 
@@ -227,6 +253,34 @@ onMounted(() => {
 	}
 	window.addEventListener('mousewheel', wheel, false)
 	window.addEventListener('wheel', wheel, false)
+
+  const controller = new ScrollMagic.Controller()
+
+	if (window.innerWidth > 575) {
+    let scene = new ScrollMagic.Scene({
+      triggerElement: '#animate',
+            duration: 500
+    })
+      .setTween('.logo-bg', {
+        scale: 10,
+        top: '70%',
+        right: '20%',
+        opacity: 0.1
+      }) 
+      .addTo(controller)
+  } else {
+    let scene = new ScrollMagic.Scene({
+      triggerElement: '#mobile-animate',
+            duration: 500
+    })
+      .setTween('.logo-bg', {
+        scale: 10,
+        top: '70%',
+        right: '20%',
+        opacity: 0.1
+      }) 
+      .addTo(controller)
+  }
 })
 
 </script>
@@ -258,6 +312,12 @@ body::-webkit-scrollbar-thumb {
 	color: #fff;
 }
 
+.logo-bg {
+  position: fixed;
+  top: -100%;
+  right: 0;
+}
+
 nav {
   width: 100vw;
   padding-left: 3.5rem;
@@ -272,14 +332,14 @@ nav {
 
 .nav-items {
   height: 4.4rem;
-  width: 55vw;
+  width: 55%;
   display: flex;
   justify-content: space-around;
   align-self: flex-start;
   backdrop-filter: blur(104px);
   background-color: rgba(42,43,56,.5); 
   border: 1px solid #252525;
-  position: fixed !important;
+  /* position: sticky !important; */
   top: 2rem;
   right: 3.5rem;
   border-radius: 1rem;
@@ -288,6 +348,7 @@ nav {
 
 .nav-logo-container {
   transform: scale(0.8);
+  position: absolute;
 }
 
 .nuxt-link {
@@ -516,8 +577,9 @@ div.d-container {
   }
 
   .nav-items {
-    width: 70vw !important;
+    width: 70% !important;
     right: 1rem;
+    position: fixed;
   }
 
   .logo-container {
@@ -557,11 +619,23 @@ div.d-container {
 }
 @media (max-width: 320px) {
   .nav-items {
-    width: 60vw !important;
+    width: 60% !important;
   }
 
   .nuxt-link span {
     display: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  .content {
+    width: 1366px;
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 1366px;
+    margin: 0 auto;
   }
 }
 </style>
