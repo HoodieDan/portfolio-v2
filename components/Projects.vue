@@ -30,7 +30,7 @@
                     <div class="links">
                         <a href="https://github.com/HoodieDan/Tektalk" target="__blank" class="link"><i class="fa-brands fa-github"></i></a>
 
-                        <button class="info"><i class="fa-solid fa-info"></i></button>
+                        <nuxt-link to="/tektalk" class="info"><i class="fa-solid fa-info"></i></nuxt-link>
                     </div>
                 </div>
             </div>
@@ -188,18 +188,22 @@ h1.header {
 }
 
 .project:nth-of-type(1)::before {  
+    -webkit-background-image: url('../assets/images/one.svg');
     background-image: url('../assets/images/one.svg');
 }
 
-.project:nth-of-type(2)::before {  
+.project:nth-of-type(2)::before {
+    -webkit-background-image: url('../assets/images/two.svg');
     background-image: url('../assets/images/two.svg');
 }
 
 .project:nth-of-type(3)::before {  
+    -webkit-background-image: url('../assets/images/three.svg');
     background-image: url('../assets/images/three.svg');
 }
 
 .project:nth-of-type(4)::before {  
+    -webkit-background-image: url('../assets/images/four.svg');
     background-image: url('../assets/images/four.svg');
 }
 
@@ -300,7 +304,7 @@ h1.header {
     color: #fff;
 }
 
-button.info {
+.info {
     background: transparent;
     width: 1.2rem;
     height: 1.2rem;
@@ -309,14 +313,17 @@ button.info {
     color: #A9A9A9;
     align-self: flex-end;
     transition: all 0.8s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-button.info:hover {
+.info:hover {
     color: #fff;
     border-color: #fff;
 }
 
-button.info i {
+.info i {
     font-size: 0.7rem;
 }
 
