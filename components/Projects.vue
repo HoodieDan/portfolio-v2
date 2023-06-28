@@ -173,6 +173,7 @@ h1.header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .project::before {
@@ -209,6 +210,7 @@ h1.header {
 
 .project {
     margin-top: 5rem;
+    position: relative;
     margin-bottom: 5rem;
     padding: 3rem;
     border: 1px solid #252525;
